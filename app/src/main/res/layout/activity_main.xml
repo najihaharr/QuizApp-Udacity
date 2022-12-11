@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <TextView
+            style="@style/HeaderTextStyle"
+            android:text="Are You A True Potterhead?" />
+
+        <TextView
+            style="@style/SubHeaderTextStyle"
+            android:text="Ask any Harry Potter fan who first read the books as a kid, and they'll probably admit that they wished they could attend Hogwarts, too. Prove your worth as a Hogwarts student!" />
+
+        <!--Question 1-->
+        <TextView
+            style="@style/Question"
+            android:text="Which of these characters is a Hufflepuff, just and loyal?" />
+
+        <RadioGroup
+            android:id="@+id/q1_selectCheck"
+            style="@style/RadioButtonGroupVertical">
+
+            <RadioButton
+                style="@style/RadioButtonVertical"
+                android:text="Ginny Weasley" />
+
+            <RadioButton
+                style="@style/RadioButtonVertical"
+                android:text="Gregory Goyle" />
+
+            <RadioButton
+                android:id="@+id/q1_cedric"
+                style="@style/RadioButtonVertical"
+                android:text="Cedric Diggory" />
+
+            <RadioButton
+                style="@style/RadioButtonVertical"
+                android:text="Cho Chang" />
+        </RadioGroup>
+
+        <TextView style="@style/questionDivider" />
+
+        <!--Question 2-->
+        <TextView
+            style="@style/Question"
+            android:text="Why was Hagrid expelled from Hogwarts as a boy?" />
+
+        <RadioGroup
+            android:id="@+id/q2_selectCheck"
+            style="@style/RadioButtonGroupVertical">
+
+            <RadioButton
+                style="@style/RadioButtonVertical"
+                android:text="For sneaking dragons into the castle" />
+
+            <RadioButton
+                style="@style/RadioButtonVertical"
+                android:text="For having too many giant parties" />
+
+            <RadioButton
+                style="@style/RadioButtonVertical"
+                android:text="For sneaking out of school for pet monsters" />
+
+            <RadioButton
+                android:id="@+id/q2_chamberofsecrets"
+                style="@style/RadioButtonVertical"
+                android:text="For opening the Chamber of Secrets" />
+        </RadioGroup>
+
+        <TextView style="@style/questionDivider" />
+
+        <!-- Question 3-->
+        <TextView
+            style="@style/Question"
+            android:text="Hermione is a remarkable witch of Muggle birth. What are her parents occupation?" />
+
+        <RadioGroup
+            android:id="@+id/q3_selectCheck"
+            style="@style/RadioButtonGroupVertical">
+
+            <RadioButton
+                android:id="@+id/q3_dentist"
+                style="@style/RadioButtonVertical"
+                android:text="Dentist" />
+
+            <RadioButton
+                style="@style/RadioButtonVertical"
+                android:text="Lawyer" />
+
+            <RadioButton
+                style="@style/RadioButtonVertical"
+                android:text="Teacher" />
+
+            <RadioButton
+                style="@style/RadioButtonVertical"
+                android:text="Advertiser" />
+        </RadioGroup>
+
+        <TextView style="@style/questionDivider" />
+
+        <!--Question 4-->
+        <TextView
+            style="@style/Question"
+            android:text="Who among them are a Death Eater?" />
+
+        <CheckBox
+            android:id="@+id/q4_yaxley"
+            style="@style/CheckBoxVertical"
+            android:text="Corban Yaxley" />
+
+        <CheckBox
+            android:id="@+id/q4_lestrange"
+            style="@style/CheckBoxVertical"
+            android:text="Bellatrix Lestrange" />
+
+        <CheckBox
+            android:id="@+id/q4_dursley"
+            style="@style/CheckBoxVertical"
+            android:text="Dudley Dursley" />
+
+        <CheckBox
+            android:id="@+id/q4_moody"
+            style="@style/CheckBoxVertical"
+            android:text="Alastor Moody" />
+
+        <TextView style="@style/questionDivider" />
+
+        <!--Question 5-->
+        <TextView
+            style="@style/Question"
+            android:text="What do Rita Skeeter, Sirius Black and Minerva McGonagall have in common?" />
+
+        <RadioGroup
+            android:id="@+id/q5_selectCheck"
+            style="@style/RadioButtonGroupVertical">
+
+            <RadioButton
+                style="@style/RadioButtonVertical"
+                android:text="They are former Ravenclaws" />
+
+            <RadioButton
+                android:id="@+id/q5_animagi"
+                style="@style/RadioButtonVertical"
+                android:text="They are Animagi" />
+
+            <RadioButton
+                style="@style/RadioButtonVertical"
+                android:text="They are Hogwarts teachers" />
+
+            <RadioButton
+                style="@style/RadioButtonVertical"
+                android:text="They are from the Order of Phoenix" />
+        </RadioGroup>
+
+        <TextView style="@style/questionDivider" />
+
+        <!--Question 6-->
+        <TextView
+            style="@style/Question"
+            android:text="What is the name of the potion to temporarily look like someone else?" />
+
+        <EditText
+            android:id="@+id/q6_potion"
+            style="@style/EditTextInput"
+            android:hint="Name of potion" />
+
+        <TextView style="@style/questionDivider" />
+
+        <!--Question 7-->
+        <TextView
+            style="@style/Question"
+            android:text="Which one of these is a Horcrux?" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/q7_invisibleCloak"
+                style="@style/imageViewStyle"
+                android:contentDescription="Invisible Cloak"
+                android:onClick="q7CloakClick"
+                android:src="@drawable/invisible_cloak" />
+
+            <ImageView
+                android:id="@+id/q7_elderWand"
+                style="@style/imageViewStyle"
+                android:layout_toRightOf="@id/q7_invisibleCloak"
+                android:contentDescription="Elder Wand"
+                android:onClick="q7WandClick"
+                android:src="@drawable/elder_wand" />
+
+            <ImageView
+                android:id="@+id/q7_hufflepuffCup"
+                style="@style/imageViewStyle"
+                android:layout_toRightOf="@id/q7_elderWand"
+                android:contentDescription="Hufflepuff Cup"
+                android:onClick="q7CupClick"
+                android:src="@drawable/hufflepuff_cup" />
+
+            <RadioGroup
+                android:id="@+id/q7_selectCheck"
+                style="@style/RadioButtonGroupHorizontal">
+
+                <RadioButton
+                    style="@style/wrapper"
+                    android:layout_marginLeft="42dp"
+                    android:layout_marginTop="96dp" />
+
+                <RadioButton
+                    style="@style/wrapper"
+                    android:layout_marginLeft="66dp"
+                    android:layout_marginTop="96dp" />
+
+                <RadioButton
+                    android:id="@+id/q7_hufflepuffCup_btn"
+                    style="@style/wrapper"
+                    android:layout_marginLeft="66dp"
+                    android:layout_marginTop="96dp" />
+
+            </RadioGroup>
+        </RelativeLayout>
+
+        <TextView style="@style/questionDivider" />
+
+        <!--Question 8-->
+        <TextView
+            style="@style/Question"
+            android:text="Because Dumbledore is afraid Voldemort will enter Harry's mind, he asks Snape to teach Harry which skill?" />
+
+        <RadioGroup
+            android:id="@+id/q8_selectCheck"
+            style="@style/RadioButtonGroupVertical">
+
+            <RadioButton
+                style="@style/RadioButtonVertical"
+                android:text="Legilimency" />
+
+            <RadioButton
+                style="@style/RadioButtonVertical"
+                android:text="Transfiguration" />
+
+            <RadioButton
+                android:id="@+id/q8_occlumency"
+                style="@style/RadioButtonVertical"
+                android:text="Occlumency" />
+
+            <RadioButton
+                style="@style/RadioButtonVertical"
+                android:text="Divination" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/submitBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="30dp"
+            android:textColor="@color/white"
+            android:onClick="submitButtonValidation"
+            android:text="Submit" />
+
+    </LinearLayout>
+
+</ScrollView>
