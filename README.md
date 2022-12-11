@@ -21,7 +21,9 @@ When a radio button is clicked
 There are 3 outcomes to this quiz:
 
 100% - Yer a Wizard
+
 Anything in between - Try again to be a Potterhead
+
 0% - You're not a Potterhead
 
 ![photo_2022-12-11_22-52-26](https://user-images.githubusercontent.com/52782039/206910949-bbb92ffe-e162-4bb2-9c02-03e93814691d.jpg)
