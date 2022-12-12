@@ -69,6 +69,9 @@ public class MainActivity extends AppCompatActivity {
         }
         else {
             computeResults();
+
+            // Reset the score
+            totalCorrect = 0;
         }
 
     }
@@ -95,22 +98,15 @@ public class MainActivity extends AppCompatActivity {
 
 
         /* Answer 4 : CheckBox Death eaters */
-        int q4Correct = 0;
-
         CheckBox yaxleyCheckTrue = (CheckBox) findViewById(R.id.q4_yaxley);
         CheckBox lestrageCheckTrue = (CheckBox) findViewById(R.id.q4_lestrange);
+        CheckBox dursleyCheckTrue = (CheckBox) findViewById(R.id.q4_dursley);
+        CheckBox moodyCheckTrue = (CheckBox) findViewById(R.id.q4_moody);
 
-        if (yaxleyCheckTrue.isChecked()) {
-            q4Correct++;
-        }
-
-        if (lestrageCheckTrue.isChecked()) {
-            q4Correct++;
-        }
-
-        if (q4Correct == 2) {
+        if (yaxleyCheckTrue.isChecked() && lestrageCheckTrue.isChecked() && !dursleyCheckTrue.isChecked() && !moodyCheckTrue.isChecked()) {
             totalCorrect++;
         }
+
 
         /* Answer 5 : Radio Button : Animagi */
         RadioButton q5Answer = (RadioButton) findViewById(R.id.q5_animagi);
@@ -121,7 +117,9 @@ public class MainActivity extends AppCompatActivity {
         /* Answer 6 : Text: Polyjuice or Polyjuice Potion */
         EditText q6Answer = (EditText) findViewById(R.id.q6_potion);
         String potionName = q6Answer.getText().toString();
-        if (potionName.equals("Polyjuice") || potionName.equals("Polyjuice Potion")) {
+
+        // User's value has been set as auto captalised but to be safe:
+        if (potionName.equalsIgnoreCase("Polyjuice") || potionName.equalsIgnoreCase("Polyjuice Potion")) {
             totalCorrect += 1;
         }
 
@@ -136,8 +134,6 @@ public class MainActivity extends AppCompatActivity {
         if (q8Answer.isChecked()) {
             totalCorrect += 1;
         }
-
-        /* DISPLAY THEN RESET SCORE */
 
         /* Show the result via Second Page */
 
